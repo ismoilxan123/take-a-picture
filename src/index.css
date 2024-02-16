@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+video {
+  /* padding: 20px; */
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.result {
+  margin-top: 10px;
+}
+canvas {
+  border-radius: 10px;
+}
