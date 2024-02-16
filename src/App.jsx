@@ -38,6 +38,12 @@ const App = () => {
     ctx.clearRect(0, 0, photo.width, photo.height);
     setHasPhoto(false);
   };
+  function cencelClick() {
+    let photo = photoRef.current;
+    let ctx = photo.getContext("2d");
+    ctx.clearRect(0, 0, photo.width, photo.height);
+    setHasPhoto(false);
+  }
 
   useEffect(() => {
     getVideo();
@@ -54,7 +60,10 @@ const App = () => {
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box">
           <form method="dialog">
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+            <button
+              onClick={cencelClick}
+              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            >
               ✕
             </button>
           </form>
